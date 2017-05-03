@@ -5,7 +5,7 @@ var dateim = new Dateim()
 
 dateim
 	.date('31/12/2017')
-	.format('dd/mm/yyyy')
+	.format('mm-dd-yyyy')
 	.when({
 		evt: 'click',
 		sel: dateSet,

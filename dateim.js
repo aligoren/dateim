@@ -87,7 +87,6 @@ Dateim.prototype.settings = function(data){
 		this.lang.month = data.lang.month
 	}
 	this.monthName = this.lang.month[monthNumber]
-	console.log(this.monthName)
 	return this
 }
 

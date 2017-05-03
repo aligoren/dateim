@@ -13,4 +13,13 @@ dateim
 			date.innerText = dateim.parsed
 		}
 	})
+	.settings({
+		lang: {
+			month: [
+				'Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs',
+				'Haziran', 'Temmuz', 'Ağustos', 'Eylül',
+				'Ekim', 'Kasım', 'Aralık'
+			]
+		}
+	})
 	.run()

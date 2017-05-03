@@ -8,6 +8,14 @@ let Dateim = function() {
 	this.month = ""
 	this.year = ""
 	this.parsed = ""
+	this.lang = {
+		month: [
+			'January', 'February', 'March', 'April', 'May',
+			'June', 'July', 'August', 'September', 'October',
+			'November', 'December'
+		]
+	}
+	this.monthName = ""
 }
 
 Dateim.prototype.InvalidDateFormatException = function(message) {
@@ -69,6 +77,17 @@ Dateim.prototype.format = function(formats) {
 		throw new this.InvalidDateFormatException("Wrong date format!")
 	}
 
+	return this
+}
+
+Dateim.prototype.settings = function(data){
+	let monthNumber = this.month - 1
+
+	if(data.lang.month) {
+		this.lang.month = data.lang.month
+	}
+	this.monthName = this.lang.month[monthNumber]
+	console.log(this.monthName)
 	return this
 }
 
